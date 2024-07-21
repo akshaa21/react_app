@@ -32,7 +32,7 @@ const CurrencyConvertor = () => {
     console.log(currencies);
 
     //conversion -> https://api.frankfurter.app/latest?amount=1&from=USD&to=INR
-    const converCurrency = async() => {
+    const convertCurrency = async() => {
         if(!amount) return;
         setConverting(true);
         try{
@@ -106,7 +106,7 @@ const CurrencyConvertor = () => {
 
       <div className="flex justify-center mt-6">
         <button 
-          onClick={converCurrency} 
+          onClick={convertCurrency} 
           className={`px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 
              focus:ring-offset-2 ${converting? "animate-pulse" : ""}`}>
             Convert
